@@ -40,6 +40,8 @@ ol {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .description-first-word-page-logo {
@@ -80,9 +82,9 @@ img {
 }
 
 .container {
-  width: 1158px;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 16px;
 }
 
 .page-navigation {
@@ -289,15 +291,15 @@ img {
 /* Друга секція. Основні принципи */
 
 .container-principles {
-  padding: 120px 0;
+  padding: 96px 0;
 }
 
 .title-essence-principles {
-  width: calc((100% - 72px) / 4);
+  width: 100%;
 }
 
 .title-essence-principles-icons {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   width: 264px;
@@ -309,10 +311,11 @@ img {
 
 .summary {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
 }
 
 .principles {
+  text-align: center;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -349,6 +352,58 @@ img {
   flex-grow: 0;
 }
 
+@media screen and (min-width: 428px) {
+  .container {
+    max-width: 428px;
+  }
+
+  .summary {
+    row-gap: 72px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .principles {
+    text-align: left;
+  }
+
+  .summary {
+    column-gap: 24px;
+  }
+
+  .title-essence-principles {
+    width: unset;
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+  }
+
+  .summary {
+    display: flex;
+    gap: 24px;
+  }
+
+  .container-principles {
+    padding: 120px 0;
+  }
+
+  .title-essence-principles {
+    width: calc((100% - 72px) / 4);
+  }
+
+  .title-essence-principles-icons {
+    display: flex;
+  }
+}
+
 /* Третя секція. Що ми робимо */
 
 .our-work {
@@ -360,11 +415,24 @@ img {
   width: calc((100% - 48px) / 3);
 }
 
+@media screen and (min-width: 320px) {
+  .our-work {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .our-work {
+    display: flex;
+  }
+}
+
 /* Четверта секція. Працівники */
 
 .our-team-description {
   background-color: #f4f4fd;
-  padding: 120px 0;
+  padding: 96px 0;
+  /* padding: 120px 0; */
 }
 
 .section-description {
@@ -385,15 +453,16 @@ img {
 
 .our-team-description-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
 }
 
 .our-team-identification {
   background-color: #ffffff;
-  width: calc((100% - 72px) / 4);
+  width: unset;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
+  margin: 0 auto;
 }
 
 .person-information {
@@ -472,16 +541,69 @@ img {
   fill: #f4f4fd;
 }
 
+@media screen and (min-width: 320px) {
+  .container {
+    max-width: 428px;
+  }
+
+  .our-team-description-list {
+    /* flex-wrap: nowrap; */
+    row-gap: 72px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .our-team-description-list {
+    display: flex;
+    column-gap: 24px;
+    margin: 0 108px;
+  }
+
+  .our-team-identification {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .person-information {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+  }
+
+  .our-team-description {
+    padding: 120px 0;
+  }
+
+  .our-team-description-list {
+    display: flex;
+    column-gap: 24px;
+    margin: 0 108px;
+  }
+
+  .our-team-identification {
+    width: calc((100% - 72px) / 4);
+  }
+}
+
 /* П'ята секція. Клієнти */
 
 .our-customers {
-  padding: 120px 0;
+  padding: 96px 0;
+  /* padding: 120px 0; */
 }
 
 .icons-customers {
   display: flex;
   justify-content: center;
   gap: 24px;
+  flex-wrap: wrap;
 }
 
 .icons-customers-link {
@@ -508,16 +630,41 @@ img {
   fill: currentColor;
 }
 
+@media screen and (min-width: 320px) {
+  .icons-customers {
+    width: calc((100%-16px) / 2);
+  }
+}
+
+@media screen and (min-width: 428px) {
+  .icons-customers {
+    width: calc((100%-48px) / 3);
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .our-customers {
+    padding: 120px 0;
+  }
+
+  .icons-customers {
+    flex-wrap: nowrap;
+  }
+}
+
 /* Підвал сторінки */
 
 .footer {
   display: flex;
-  align-items: baseline;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .under-logo-and-slogan {
   background-color: #2e2f42;
-  padding: 100px 0;
+  padding: 96px 0;
+  /* padding: 100px 0; */
 }
 
 .footer-logo {
@@ -529,9 +676,8 @@ img {
   color: #4d5ae5;
   margin-bottom: 16px;
 
-  /* identical to box height, or 117% */
   display: inline-block;
-  align-items: center;
+    align-items: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
@@ -552,25 +698,26 @@ img {
   line-height: 1.5;
   background-color: var(--brand-color);
   max-width: 264px;
-
-  /* or 150% */
   letter-spacing: 0.02em;
-
-  /* CLOUD */
   color: #f4f4fd;
+  margin-bottom: 72px;
 }
 
 .social-media {
   display: block;
-  margin-right: 80px;
-  margin-left: 120px;
+  margin: 0 auto;
+  /* margin-right: 80px;
+  margin-left: 120px; */
 }
 
 .subscribe-wrapper {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .title-social-media {
+  text-align: center;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -581,7 +728,7 @@ img {
 
 .social-media-list {
   display: flex;
-  gap: 16px;
+    gap: 16px;
 }
 
 .social-media-list-item {
