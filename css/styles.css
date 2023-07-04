@@ -1071,6 +1071,10 @@ img {
   fill: #f4f4fd;
 }
 
+.contact-form-checkbox:focus + .contact-form-checkbox-text .checkbox-text {
+  border-color: #404bbf;
+  }
+
 .contact-form-checkbox-link {
   color: #4d5ae5;
 }
