@@ -201,7 +201,7 @@ img {
   }
   
   .contact-information {
-    display: inline-block;
+    display: flex;
        font-style: normal;
     margin-left: auto;
   }
