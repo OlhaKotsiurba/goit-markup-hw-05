@@ -196,9 +196,16 @@ img {
   }
 }
 
+.menu-icon-view {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+
 @media screen and (min-width: 320px) {
   .common-container {
-    /* max-width: 428px; */
+    
     height: 70px;
   }
 
@@ -277,10 +284,7 @@ img {
     gap: 40px;
   }
 
-  .page-logo {
-  }
-
-  .contacts-element {
+   .contacts-element {
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
