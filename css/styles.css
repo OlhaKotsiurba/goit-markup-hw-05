@@ -92,7 +92,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+
 }
 
 .menu {
@@ -268,20 +268,16 @@ img {
   .desktop-container {
     max-width: 1158px;
     margin-right: 156px;
-    
   }
 
-  
   .contacts {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 40px;
-    
   }
 
   .page-logo {
-    
   }
 
   .contacts-element {
@@ -298,15 +294,19 @@ img {
 .mob-menu {
   position: fixed;
   top: 0;
-  z-index: 2;
+  left: 0;
+  z-index: 999;
   width: 100vw;
   height: 100vh;
-  background-color: transparent;
-  padding: 20px 20px 40px 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+  background-color: #ffffff;
+  padding: 80px 35px 40px 40px;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+  }
+
+  .mob-menu.is-open {
+    transform: translateX(0);
+  }
 
 .close-mob-menu-button {
   /* display: flex;
@@ -1031,8 +1031,9 @@ img {
 }
 
 .subscribe-form-desc {
-  max-width: 398px;
-  margin: 0 auto;
+  width: 398px;
+  display: flex;
+  justify-content: center;
 }
 
 .subscribe-form-email {
@@ -1103,11 +1104,15 @@ img {
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 24px;
+    gap: 72px 24px;
   }
 
   .footer-logo-container {
     display: block;
+  }
+
+  .footer-description {
+    margin-bottom: 0;
   }
 
   .social-media {
@@ -1118,6 +1123,10 @@ img {
     text-align: start;
   }
 
+  .social-media-list {
+    margin-bottom: 0;
+  }
+
   .subscribe-wrapper {
     display: block;
     width: 100%;
@@ -1125,6 +1134,12 @@ img {
 
   .subscribe-form {
     gap: 24px;
+  }
+
+  .subscribe-form-desc {
+    width: 264px;
+    display: flex;
+    justify-content: flex-start;
   }
 
   .subscribe-form-desc {
@@ -1153,9 +1168,9 @@ img {
   .container {
     max-width: 1440px;
   }
+
   .footer {
     flex-wrap: nowrap;
-    padding-left: 156px;
     gap: 0;
   }
 
